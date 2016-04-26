@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
+
+html, #app {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 100%;
+	max-height: 100%;
+	position: relative;
+}
+
+#toolbar {
+	float: left;
+	width: 80px;
+	height: 100%;
+	background-color: #303F9F;
+	color: #9FA8DA;
+	padding: 35px 25px 25px 25px;
+}
+
+#notes-list {
+	float: left;
+	width: 300px;
+	height: 100%;
+	background-color: #3F51B5;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+}
+
+#list-header {
+	padding: 5px 25px 25px 25px;
+}
+
+#list-header h2 {
+	font-weight: 300;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 22px;
+	padding-bottom: 8px;
+}
+
+#notes-list .container {
+	height: calc(100% - 137px);
+	max-height: calc(100% - 137px);
+	overflow: auto;
+	width: 100%;
+	padding: 0;
+}
+
+#notes-list .container .list-group-item {
+	border: 0;
+	border-radius: 0;
+}
+
+.list-group-item-heading {
+	font-weight: 300;
+	font-size: 15px;
+	color: #fff;
+}
+
+a.list-group-item .list-group-item-heading, button.list-group-item .list-group-item-heading {
+	color: #fff;
+}
+
+.list-group-item {
+	background: #3F51B5;
+	color: #fff;
+}
+
+.Logo {
+	// padding: 2rem 0;
+}
+.Logo svg {
+    height: 7rem;
+    width: 25rem;
+    padding: 1rem 0;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+	background: #303F9F;
+}
+
+a.list-group-item:hover {
+	background: #9FA8DA;
+}
+
+#note-editor {
+	height: 100%;
+	margin-left: 380px;
+}
+
+#note-editor textarea {
+	height: 100%;
+	border: 0;
+	border-radius: 0;
+}
+
+#toolbar i {
+	font-size: 30px;
+	margin-bottom: 35px;
+	cursor: pointer;
+	opacity: 0.8;
+	transition: opacity 0.5s ease;
+}
+
+#toolbar i:hover {
+	opacity: 1;
+}
+
+.starred {
+	color: #EF5350;
+}
