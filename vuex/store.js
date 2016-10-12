@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import ls from 'local-storage'
+
 import middlewares from './middlewares'
 import * as getters from './getters'
 import * as actions from './actions'
 import { mutations } from './mutations'
-
 
 Vue.use(Vuex)
 

@@ -19,10 +19,7 @@ describe('mutations', () => {
 		// mock state
     	const state = {
     		notes: [
-	    		{
-					text: 'Mock',
-					favorite: false
-				}
+	    		{ text: 'Mock', favorite: false }
     		]
     	}
 
@@ -38,12 +35,7 @@ describe('mutations', () => {
 	it('editNote', () => {
 		// mock state
     	const state = {
-    		notes: [
-	    		{
-					text: 'Mock',
-					favorite: false
-				}
-    		],
+    		notes: [{ text: 'Mock', favorite: false }],
     		activeNote: {}
     	}
 
@@ -52,7 +44,7 @@ describe('mutations', () => {
 		expect(state.notes[0].text).to.equal('Mock')
 
 		// mock new text
-		let text = 'nextindex'
+		const text = 'nextindex'
 
 		// EditNote is working with activeNote, so active note needs to be set.
 		state.activeNote = state.notes[0]

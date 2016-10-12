@@ -24,11 +24,11 @@ export default {
 
  	mounted () {
  		key('c', () => {
- 			addNote()
+ 			this.addNote()
  		});
  		key('d', () => {
  			console.log('you pressed a!')
- 			deleteNote()
+ 			this.deleteNote()
  		});
  	}
 }

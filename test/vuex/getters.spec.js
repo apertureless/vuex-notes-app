@@ -32,5 +32,4 @@ describe('getters', () => {
 
 		expect(result).to.equal('Mock2')
 	})
-
 })

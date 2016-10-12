@@ -53,5 +53,4 @@ describe('actions', () => {
 			{ type: 'setActiveNote', payload: {favorite: false, text: 'Neue Notiz'} }
 		], done)
 	})
-
 })
