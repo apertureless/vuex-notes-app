@@ -4,6 +4,5 @@ import App from './components/App.vue'
 
 new Vue({
 	store,
-	el: 'body',
 	components: { App }
-})
+}).$mount('.app')

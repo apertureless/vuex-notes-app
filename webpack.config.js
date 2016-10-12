@@ -17,8 +17,13 @@ module.exports = {
 			}
 		]
 	},
+	resolve: {
+    	alias: {
+    		vue: 'vue/dist/vue.js'
+    	}
+	},
 	babel: {
-		presets: ['es2015'],
-		plugins: ['transform-runtime']
+		presets: ['es2015', 'stage-2'],
+		plugins: ['transform-runtime', 'transform-object-rest-spread']
 	}
 }

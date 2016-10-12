@@ -9,17 +9,27 @@
 </template>
 
 <script>
-import { addNote, deleteNote, toggleFavorite } from '../vuex/actions'
+import key from 'keymaster'
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
-	vuex: {
-		getters: {
-			activeNote: state => state.activeNote
-		},
-		actions: {
-			addNote,
-			deleteNote,
-			toggleFavorite
-		}
-	}
+	computed: mapGetters([
+    	'activeNote'
+  	]),
+	methods: mapActions([
+	    'addNote',
+		'deleteNote',
+		'toggleFavorite'
+	]),
+
+ 	mounted () {
+ 		key('c', () => {
+ 			addNote()
+ 		});
+ 		key('d', () => {
+ 			console.log('you pressed a!')
+ 			deleteNote()
+ 		});
+ 	}
 }
 </script>

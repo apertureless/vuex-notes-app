@@ -41,20 +41,12 @@
 </template>
 
 <script>
-import { updateActiveNote } from '../vuex/actions'
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
 	data() {
 		return {
 			show: 'all'
-		}
-	},
-	vuex: {
-		getters: {
-			notes: state => state.notes,
-			activeNote: state => state.activeNote
-		},
-		actions: {
-			updateActiveNote
 		}
 	},
 	computed: {
@@ -64,7 +56,14 @@ export default {
 			} else if (this.show === 'favorites') {
 				return this.notes.filter(note => note.favorite)
 			}
-		}
- 	}
+		},
+		...mapGetters([
+    	'notes',
+      'activeNote'
+    ])
+ 	},
+ 	methods: mapActions([
+	  'updateActiveNote'
+	]),
 }
 </script>

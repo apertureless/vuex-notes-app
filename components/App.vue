@@ -12,6 +12,6 @@ import NotesList from './NotesList.vue'
 import Editor from './Editor.vue'
 
 export default {
-	components: { Toolbar, NotesList, Editor}
+	components: { Toolbar, NotesList, Editor }
 }
 </script>

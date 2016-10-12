@@ -1,19 +1,7 @@
-export const addNote = ({ dispatch }) => {
-  dispatch('ADD_NOTE')
-}
+export const addNote = ({ commit }) => commit('addNote')
+export const editNote = ({ commit }, e) => commit('editNote', e.target.value)
+export const deleteNote = ({ commit }) => commit('deleteNote')
 
-export const editNote = ({ dispatch }, e) => {
-  dispatch('EDIT_NOTE', e.target.value)
-}
+export const updateActiveNote = ({ commit }, note) => commit('setActiveNote', note)
 
-export const deleteNote = ({ dispatch }) => {
-  dispatch('DELETE_NOTE')
-}
-
-export const updateActiveNote = ({ dispatch }, note) => {
-  dispatch('SET_ACTIVE_NOTE', note)
-}
-
-export const toggleFavorite = ({ dispatch }) => {
-  dispatch('TOGGLE_FAVORITE')
-}
+export const toggleFavorite = ({ commit }) => commit('toggleFavorite')
