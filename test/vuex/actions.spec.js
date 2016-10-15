@@ -10,7 +10,7 @@ import store from '../../vuex/store'
  * @param  {Function} done              [description]
  * @return {[type]}                     [description]
  */
-const testAction = (action, args, state, expectedMutations, done ) => {
+const testAction = (action, args, state, expectedMutations, done) => {
 	let count = 0
 
 	// Mock Commit
